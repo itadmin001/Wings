@@ -1,0 +1,189 @@
+0000.054 (0) Opened log file at time: Mon, 11 Feb 2019 16:11:48 +0000 on http://skydivewings.com
+0000.056 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.14.2.1 WP: 5.0.3 PHP: 5.6.30 (cli, Linux a2nlwpcron029.prod.iad2.secureserver.net 2.6.32-896.16.1.lve1.4.51.el6.nfsfixes.x86_64 #1 SMP Wed Mar 21 11:58:39 MST 2018 x86_64) MySQL: 5.6.32 WPLANG: en Server:  safe_mode: 0 max_execution_time: 900 memory_limit: -1 (used: 69.5M | 70.5M) multisite: N openssl: OpenSSL 1.0.1e-fips 11 Feb 2013 mcrypt: Y LANG: en_US.UTF-8 ZipArchive::addFile: Y
+0000.058 (0) Free space on disk containing Updraft's temporary directory: 197199146 MB
+0007.599 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0007.600 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0007.605 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1549814129, seconds_ago=87386)
+0007.608 (0) Set semaphore last lock (fd) time to 2019-02-11 16:11:55
+0007.609 (0) Semaphore lock (fd) complete
+0007.615 (0) Backup run: resumption=0, nonce=3999aad4e70a, begun at=1549901508 (7s ago), job type=backup
+0007.617 (0) Scheduling a resumption (1) after 300 seconds (1549901815) in case this run gets aborted
+0007.631 (0) Checking if we have a zip executable available
+0007.632 (0) Testing: /usr/bin/zip
+0007.649 (0) Output: zip warning: binziptest/test.zip not found or empty
+0007.656 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0007.657 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0007.658 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0007.659 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0007.677 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0007.679 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0007.907 (0) Working binary zip found: /usr/bin/zip
+0007.910 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0007.911 (0) Creation of backups of directories: beginning
+0007.928 (0) No backup of plugins: excluded by user's options
+0007.929 (0) No backup of themes: excluded by user's options
+0007.930 (0) No backup of uploads: excluded by user's options
+0007.931 (0) No backup of others: excluded by user's options
+0007.935 (0) Saving backup status to database (elements: 0)
+0007.974 (0) Beginning creation of database dump (WordPress DB)
+0007.980 (0) Testing: /usr/bin/mysqldump
+0007.997 (0) Binary mysqldump: error (code: 2)
+0008.015 (0) Table wp_options: Total expected rows (approximate): 403
+0008.070 (0) Table wp_options: Total rows added: 446 in 0.05 seconds
+0008.286 (0) Table wp_options: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_options.table.gz - 173.7 KB)
+0008.296 (0) Table wp_users: Total expected rows (approximate): 7
+0008.299 (0) Table wp_users: Total rows added: 7 in 0.00 seconds
+0008.302 (0) Table wp_users: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_users.table.gz - 1 KB)
+0008.309 (0) Table wp_usermeta: Total expected rows (approximate): 140
+0008.313 (0) Table wp_usermeta: Total rows added: 140 in 0.00 seconds
+0008.317 (0) Table wp_usermeta: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_usermeta.table.gz - 3.4 KB)
+0008.333 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0008.335 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0008.338 (0) Table wp_commentmeta: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0008.346 (0) Table wp_comments: Total expected rows (approximate): 0
+0008.349 (0) Table wp_comments: Total rows added: 0 in 0.00 seconds
+0008.352 (0) Table wp_comments: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_comments.table.gz - 0.5 KB)
+0008.374 (0) Table wp_links: Total expected rows (approximate): 0
+0008.376 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0008.379 (0) Table wp_links: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_links.table.gz - 0.4 KB)
+0008.387 (0) Table wp_postmeta: Total expected rows (approximate): 11438
+0008.788 (0) Table wp_postmeta: Total rows added: 16076 in 0.40 seconds
+0009.214 (0) Table wp_postmeta: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_postmeta.table.gz - 378.2 KB)
+0009.223 (0) Table wp_posts: Total expected rows (approximate): 2716
+0009.535 (0) Table wp_posts: Total rows added: 2892 in 0.31 seconds
+0009.954 (0) Table wp_posts: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_posts.table.gz - 339.1 KB)
+0009.963 (0) Table wp_term_relationships: Total expected rows (approximate): 136
+0009.966 (0) Table wp_term_relationships: Total rows added: 110 in 0.00 seconds
+0009.969 (0) Table wp_term_relationships: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_term_relationships.table.gz - 0.7 KB)
+0010.183 (0) Table wp_term_taxonomy: Total expected rows (approximate): 43
+0010.186 (0) Table wp_term_taxonomy: Total rows added: 47 in 0.00 seconds
+0010.189 (0) Table wp_term_taxonomy: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_term_taxonomy.table.gz - 0.7 KB)
+0010.196 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0010.198 (0) Table wp_termmeta: Total rows added: 0 in 0.00 seconds
+0010.201 (0) Table wp_termmeta: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_termmeta.table.gz - 0.4 KB)
+0010.209 (0) Table wp_terms: Total expected rows (approximate): 43
+0010.212 (0) Table wp_terms: Total rows added: 47 in 0.00 seconds
+0010.215 (0) Table wp_terms: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_terms.table.gz - 0.8 KB)
+0010.224 (0) Table wp_31w1rhxpjc_commentmeta: Total expected rows (approximate): 0
+0010.226 (0) Table wp_31w1rhxpjc_commentmeta: Total rows added: 0 in 0.00 seconds
+0010.229 (0) Table wp_31w1rhxpjc_commentmeta: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_commentmeta.table.gz - 0.4 KB)
+0010.238 (0) Table wp_31w1rhxpjc_comments: Total expected rows (approximate): 1
+0010.240 (0) Table wp_31w1rhxpjc_comments: Total rows added: 1 in 0.00 seconds
+0010.243 (0) Table wp_31w1rhxpjc_comments: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_comments.table.gz - 0.7 KB)
+0010.253 (0) Table wp_31w1rhxpjc_links: Total expected rows (approximate): 0
+0010.255 (0) Table wp_31w1rhxpjc_links: Total rows added: 0 in 0.00 seconds
+0010.258 (0) Table wp_31w1rhxpjc_links: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_links.table.gz - 0.5 KB)
+0010.267 (0) Table wp_31w1rhxpjc_options: Total expected rows (approximate): 125
+0010.273 (0) Table wp_31w1rhxpjc_options: Total rows added: 114 in 0.00 seconds
+0010.278 (0) Table wp_31w1rhxpjc_options: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_options.table.gz - 3.8 KB)
+0010.287 (0) Table wp_31w1rhxpjc_postmeta: Total expected rows (approximate): 1
+0010.289 (0) Table wp_31w1rhxpjc_postmeta: Total rows added: 1 in 0.00 seconds
+0010.292 (0) Table wp_31w1rhxpjc_postmeta: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_postmeta.table.gz - 0.4 KB)
+0010.302 (0) Table wp_31w1rhxpjc_posts: Total expected rows (approximate): 2
+0010.304 (0) Table wp_31w1rhxpjc_posts: Total rows added: 2 in 0.00 seconds
+0010.308 (0) Table wp_31w1rhxpjc_posts: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_posts.table.gz - 1.3 KB)
+0010.318 (0) Table wp_31w1rhxpjc_term_relationships: Total expected rows (approximate): 1
+0010.320 (0) Table wp_31w1rhxpjc_term_relationships: Total rows added: 1 in 0.00 seconds
+0010.322 (0) Table wp_31w1rhxpjc_term_relationships: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_term_relationships.table.gz - 0.4 KB)
+0010.331 (0) Table wp_31w1rhxpjc_term_taxonomy: Total expected rows (approximate): 1
+0010.333 (0) Table wp_31w1rhxpjc_term_taxonomy: Total rows added: 1 in 0.00 seconds
+0010.336 (0) Table wp_31w1rhxpjc_term_taxonomy: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_term_taxonomy.table.gz - 0.4 KB)
+0010.344 (0) Table wp_31w1rhxpjc_termmeta: Total expected rows (approximate): 0
+0010.346 (0) Table wp_31w1rhxpjc_termmeta: Total rows added: 0 in 0.00 seconds
+0010.348 (0) Table wp_31w1rhxpjc_termmeta: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_termmeta.table.gz - 0.4 KB)
+0010.358 (0) Table wp_31w1rhxpjc_terms: Total expected rows (approximate): 1
+0010.360 (0) Table wp_31w1rhxpjc_terms: Total rows added: 1 in 0.00 seconds
+0010.363 (0) Table wp_31w1rhxpjc_terms: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_terms.table.gz - 0.4 KB)
+0010.371 (0) Table wp_31w1rhxpjc_usermeta: Total expected rows (approximate): 14
+0010.373 (0) Table wp_31w1rhxpjc_usermeta: Total rows added: 14 in 0.00 seconds
+0010.376 (0) Table wp_31w1rhxpjc_usermeta: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_usermeta.table.gz - 0.6 KB)
+0010.384 (0) Table wp_31w1rhxpjc_users: Total expected rows (approximate): 1
+0010.386 (0) Table wp_31w1rhxpjc_users: Total rows added: 1 in 0.00 seconds
+0010.389 (0) Table wp_31w1rhxpjc_users: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_users.table.gz - 0.6 KB)
+0010.396 (0) Table wp_nf_objectmeta: Total expected rows (approximate): 80
+0010.399 (0) Table wp_nf_objectmeta: Total rows added: 80 in 0.00 seconds
+0011.017 (0) Table wp_nf_objectmeta: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_nf_objectmeta.table.gz - 1.2 KB)
+0011.025 (0) Table wp_nf_objects: Total expected rows (approximate): 4
+0011.027 (0) Table wp_nf_objects: Total rows added: 4 in 0.00 seconds
+0011.030 (0) Table wp_nf_objects: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_nf_objects.table.gz - 0.3 KB)
+0011.039 (0) Table wp_nf_relationships: Total expected rows (approximate): 3
+0011.041 (0) Table wp_nf_relationships: Total rows added: 3 in 0.00 seconds
+0011.045 (0) Table wp_nf_relationships: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_nf_relationships.table.gz - 0.4 KB)
+0011.052 (0) Table wp_ninja_forms_fav_fields: Total expected rows (approximate): 17
+0011.055 (0) Table wp_ninja_forms_fav_fields: Total rows added: 17 in 0.00 seconds
+0011.058 (0) Table wp_ninja_forms_fav_fields: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_ninja_forms_fav_fields.table.gz - 2.6 KB)
+0011.066 (0) Table wp_ninja_forms_fields: Total expected rows (approximate): 5
+0011.068 (0) Table wp_ninja_forms_fields: Total rows added: 5 in 0.00 seconds
+0011.071 (0) Table wp_ninja_forms_fields: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_ninja_forms_fields.table.gz - 1 KB)
+0011.080 (0) Table wp_revslider_css: Total expected rows (approximate): 114
+0011.091 (0) Table wp_revslider_css: Total rows added: 114 in 0.01 seconds
+0011.095 (0) Table wp_revslider_css: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_css.table.gz - 5 KB)
+0011.103 (0) Table wp_revslider_layer_animations: Total expected rows (approximate): 0
+0011.105 (0) Table wp_revslider_layer_animations: Total rows added: 0 in 0.00 seconds
+0011.313 (0) Table wp_revslider_layer_animations: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_layer_animations.table.gz - 0.3 KB)
+0011.323 (0) Table wp_revslider_navigations: Total expected rows (approximate): 0
+0011.325 (0) Table wp_revslider_navigations: Total rows added: 0 in 0.00 seconds
+0011.328 (0) Table wp_revslider_navigations: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_navigations.table.gz - 0.3 KB)
+0011.336 (0) Table wp_revslider_settings: Total expected rows (approximate): 0
+0011.338 (0) Table wp_revslider_settings: Total rows added: 1 in 0.00 seconds
+0011.341 (0) Table wp_revslider_settings: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_settings.table.gz - 0.3 KB)
+0011.351 (0) Table wp_revslider_sliders: Total expected rows (approximate): 10
+0011.354 (0) Table wp_revslider_sliders: Total rows added: 10 in 0.00 seconds
+0011.357 (0) Table wp_revslider_sliders: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_sliders.table.gz - 2.2 KB)
+0011.365 (0) Table wp_revslider_slides: Total expected rows (approximate): 23
+0011.375 (0) Table wp_revslider_slides: Total rows added: 23 in 0.01 seconds
+0011.379 (0) Table wp_revslider_slides: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_slides.table.gz - 10.3 KB)
+0011.391 (0) Table wp_revslider_static_slides: Total expected rows (approximate): 0
+0011.394 (0) Table wp_revslider_static_slides: Total rows added: 0 in 0.00 seconds
+0011.397 (0) Table wp_revslider_static_slides: finishing file (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_static_slides.table.gz - 0.3 KB)
+0011.405 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_options.table.gz (1/36): adding to final database dump
+0011.454 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_users.table.gz (2/36): adding to final database dump
+0011.457 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_usermeta.table.gz (3/36): adding to final database dump
+0011.461 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_commentmeta.table.gz (4/36): adding to final database dump
+0011.463 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_comments.table.gz (5/36): adding to final database dump
+0011.465 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_links.table.gz (6/36): adding to final database dump
+0011.468 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_postmeta.table.gz (7/36): adding to final database dump
+0011.635 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_posts.table.gz (8/36): adding to final database dump
+0011.745 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_term_relationships.table.gz (9/36): adding to final database dump
+0011.748 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_term_taxonomy.table.gz (10/36): adding to final database dump
+0011.751 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_termmeta.table.gz (11/36): adding to final database dump
+0011.758 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_terms.table.gz (12/36): adding to final database dump
+0011.761 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_commentmeta.table.gz (13/36): adding to final database dump
+0011.763 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_comments.table.gz (14/36): adding to final database dump
+0011.766 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_links.table.gz (15/36): adding to final database dump
+0011.768 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_options.table.gz (16/36): adding to final database dump
+0011.771 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_postmeta.table.gz (17/36): adding to final database dump
+0011.774 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_posts.table.gz (18/36): adding to final database dump
+0011.776 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_term_relationships.table.gz (19/36): adding to final database dump
+0011.779 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_term_taxonomy.table.gz (20/36): adding to final database dump
+0011.781 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_termmeta.table.gz (21/36): adding to final database dump
+0011.783 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_terms.table.gz (22/36): adding to final database dump
+0011.785 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_usermeta.table.gz (23/36): adding to final database dump
+0011.788 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_31w1rhxpjc_users.table.gz (24/36): adding to final database dump
+0011.790 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_nf_objectmeta.table.gz (25/36): adding to final database dump
+0011.793 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_nf_objects.table.gz (26/36): adding to final database dump
+0011.795 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_nf_relationships.table.gz (27/36): adding to final database dump
+0011.797 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_ninja_forms_fav_fields.table.gz (28/36): adding to final database dump
+0011.804 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_ninja_forms_fields.table.gz (29/36): adding to final database dump
+0011.806 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_css.table.gz (30/36): adding to final database dump
+0011.810 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_layer_animations.table.gz (31/36): adding to final database dump
+0011.813 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_navigations.table.gz (32/36): adding to final database dump
+0011.815 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_settings.table.gz (33/36): adding to final database dump
+0011.817 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_sliders.table.gz (34/36): adding to final database dump
+0012.025 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_slides.table.gz (35/36): adding to final database dump
+0012.031 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db-table-wp_revslider_static_slides.table.gz (36/36): adding to final database dump
+0013.487 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db.gz: finished writing out complete database file (912 KB)
+0013.563 (0) Total database tables backed up: 36 (backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db.gz, size: 946317, sha256)
+0013.614 (0) backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db.gz: db: This file has not yet been successfully uploaded: will queue
+0013.615 (0) Saving backup history. Total backup size: 924.1 KB
+0013.639 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0013.642 (0) Cloud backup selection (1/1):  with instance (1/1) (last)
+0013.643 (0) No remote despatch: user chose no remote backup service
+0013.645 (0) Recording as successfully uploaded: backup_2019-02-11-1611_Skydive_Wings_3999aad4e70a-db.gz (37c712cf95c7bf4b304ebe9e77a24656)
+0013.648 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0013.649 (0) Resume backup (3999aad4e70a, 0): finish run
+0013.652 (0) Decremented the semaphore (fd) by 1
+0013.653 (0) Semaphore (fd) unlocked
+0013.654 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0013.658 (0) No email will/can be sent - the user has not configured an email address.
+0013.659 (0) The backup apparently succeeded and is now complete

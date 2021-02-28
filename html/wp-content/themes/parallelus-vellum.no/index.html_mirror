@@ -1,0 +1,1389 @@
+<!doctype html>
+
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+  <meta charset="utf-8">
+
+  <title>Skydive Wings</title>
+  <meta name="description" content="Skydive Wings">
+  <meta name="author" content="Jeremy Hester">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Rouge+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.js?r=11"></script>
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+			 <div class='holder'>
+  <div id="logo"><img src="http://skydivewings.com/wordpress/wp-content/uploads/wings-classic.png" /></div>
+  <div id="logo2"><img src="http://skydivewings.com/wordpress/wp-content/uploads/logo-top.png" /></div>
+  <div id="product_id">
+  <h2>Wings Classic</h2>
+  </div>
+  <div class='myTitle'>Skydive Wings </div>
+	<div class='held' id='ActivityDIV'>
+	</div>
+ <div class="container">
+
+		<div class="row">
+			<div class="col col-sm-12">
+				<ul class="checkboxes">
+					<li><label><input type="checkbox" id="diag_show_hide"><span class="white">hide section numbers</span></label></li>
+					<li><label><input type="checkbox" id="spacer_show_hide"><span class="white">add spacer foam ($)</span></label></li>
+					<li><label><input type="checkbox" id="res_metal_dring"><span class="white">reserve metal D-ring ($)</span></label></li>
+					<li><label><input type="checkbox" id="add-pinstripes"><span class="white">pinstripes ($)</span><span id="pinstripe-instruction">-use bottom image-</label></li>
+				</ul>
+			</div><!-- column  -->
+	 </div><!-- row  -->
+	 <div class="row">
+			<div class="col col-sm-12">
+			<span class="list_title_top">Deployment:</span>
+				<ul class="checkboxes">
+					<li><label><input type="radio" name="main-release" id="BOC" onclick="mainReleaseOption(this.id)" checked><span class="white">Standard BOC</span></label></li>
+					<li><label><input type="radio" name="main-release" id="freeFly" onclick="mainReleaseOption(this.id)" ><span class="white">FreeFly Handle ($)</span></label></li>
+					<li><label><input type="radio" name="main-release" id="hacky" onclick="mainReleaseOption(this.id)" ><span class="white" >Hacky Handle ($)</span></label></li>
+				</ul>
+			</div><!-- column  -->
+	 </div><!-- row  -->
+	<div class="tab-menu" id="swatches">
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#colors_0" data-toggle="tab" role="tab" onclick="clearIndicator()">Cordura</a></li>
+			<li role="presentation"><a href="#colors_1" data-toggle="tab" role="tab" onclick="clearIndicator()">Parapack</a></li>
+			<li role="presentation"><a href="#colors_2" data-toggle="tab" role="tab" onclick="clearIndicator()">Tie-Dye</a></li>
+			<li role="presentation"><a href="#colors_3" data-toggle="tab" role="tab" onclick="swatchClickHarness()">Harness</a></li>
+			<li role="presentation"><a href="#colors_4" data-toggle="tab" role="tab" onclick="clearIndicator()">Binding Tape</a></li>
+		</ul>
+		<div class="tab-content clearfix">
+
+		<div id="colors_0" class="tab-pane active"><ul id="0"></ul></div>
+		<div id="colors_1" class="tab-pane"><ul id="1"></ul></div>
+		<div id="colors_2" class="tab-pane"><ul id="2"></ul></div>
+		<div id="colors_3" class="tab-pane"><ul id="3"></ul></div>
+		<div id="colors_4" class="tab-pane"><ul id="4"></ul></div>
+	</div>
+	</div>
+	<p style="font-weight:bold;"><span class="warning">***NOTICE:</span> Colors shown may differ from actual fabric colors due to Individual monitor settings.</p>
+</div>
+<div class="buttons">
+		<a id="btnClear"  onclick='svgClear()'    class="button gray">Clear Color</a>
+		<a id="btnDownloadSVG" class="button gray">Download Image</a>
+	</div>
+
+	<div id="bottom-detail-holder">
+		<div class="container">
+			<div class="row">
+				<div class="col col-sm-12">
+				 <div class="container">
+					 <div id="bottom-detail-options"></div>
+						<div class="tab-menu">
+							<ul class="nav nav-tabs" id="bottom-detail-menu" role="tablist">
+								<li role="presentation" class="active"><a href="#detail_image_holder_0" data-toggle="tab" role="tab" onclick="clearLogoIndicator('logo_colors_01')">Res Flap</a></li>
+								<li role="presentation"><a href="#detail_image_holder_1" data-toggle="tab" role="tab" onclick="clearLogoIndicator('logo_colors_02')">Ring Cover</a></li>
+								<li role="presentation"><a href="#detail_image_holder_2" data-toggle="tab" role="tab" onclick="clearLogoIndicator('logo_colors_03')">Side Walls</a></li>
+							</ul>
+							<div class="tab-content clearfix">
+
+							<div id="detail_image_holder_0" class="tab-pane active">
+								<ul>
+									<div class="container">
+										<div id="logo_colors_01">
+										<form id="rFlapForm">
+												<table>
+													<tr>
+														<td><input type="radio" name="rFlap" value="logo" onclick="LogoOrText('rFlap','resFlapTextAreaInput', 'resFlapTextArea','resFlapTextAreaDetail','rFlapTextForm','r_flap_logo','rFlapTitle')" checked /></td><td>Logo</td>
+													</tr>
+													<tr>
+														<td><input type="radio" name="rFlap" value="text" onclick="LogoOrText('rFlap','resFlapTextAreaInput', 'resFlapTextArea','resFlapTextAreaDetail','rFlapTextForm','r_flap_logo','rFlapTitle')" /></td><td>Custom Text</td>
+													</tr>
+													<tr>
+														<td><input type="radio" name="rFlap" value="pinstripes" onclick="displayPinstripeColors()" /></td><td>Pinstripe Colors</td>
+													</tr>
+												</table>
+											</form>
+											<form id="rFlapTextForm">
+												<table>
+													<tr>
+														<td><input type="radio" name="rFlapText" value="standard" onclick="changeText('rFlapText','custom_text_main','custom_text_detail','resFlapTextAreaDetail')" checked /></td><td>Standard</td>
+													</tr>
+													<tr>
+														<td><input type="radio" name="rFlapText" value="script" onclick="changeText('rFlapText','custom_text_main','custom_text_detail', 'resFlapTextAreaDetail')" /></td><td>Script</td>
+													</tr>
+												</table>
+											</form>
+											<span class="current_logo_color">
+											</span>
+											<span id="rFlapTitle" class="logo_color_list_title">Logo Colors</span>
+											<div class="logo_colors">
+												<ul></ul>
+											</div>
+											<div id="stripe_colors">
+												<ul></ul>
+											</div>
+											<div id="resFlapTextAreaInput">
+													<tr>
+														<td><label>Text 1:</label></td><td> <input type="text" name="rFlapText01" id="rFlapText01" placeholder="Custom" onkeyup="updateText(this, 'r_f_ct01','main_rf_ct01')"></td>
+													</tr>
+													<tr>
+														<td><label>Text 2:</label></td><td> <input type="text" name="rFlapText02" placeholder="Name" onkeyup="updateText(this, 'r_f_ct02','main_rf_ct02')"></td>
+													</tr>
+													<tr>
+														<td><label>Text 3:</label></td><td> <input type="text" name="rFlapText03" placeholder="Text" onkeyup="updateText(this, 'r_f_ct03','main_rf_ct03')"></td>
+													</tr>
+													</div>
+										</div>
+										<span id="res-flap-detail-inner"></span>
+									</div>
+								</ul>
+							</div>
+							<div id="detail_image_holder_1" class="tab-pane">
+								<ul>
+									<div class="container">
+										<div id="logo_colors_02">
+										<form id="ringCoverForm">
+												<table>
+													<tr>
+														<td><input type="radio" name="ringCover" value="logo" onclick="LogoOrText('ringCover','rcTextAreaInput','ringCoverTextArea','ringCoverTextAreaDetail','ringCoverTextForm','ring_cover_logo','ringCoverTitle')" checked /></td><td>Logo</td>
+													</tr>
+													<tr>
+														<td><input type="radio" name="ringCover" value="text" onclick="LogoOrText('ringCover','rcTextAreaInput','ringCoverTextArea','ringCoverTextAreaDetail','ringCoverTextForm','ring_cover_logo','ringCoverTitle')" /></td><td>Custom Text </td>
+													</tr>
+												</table>
+											</form>
+											<form id="ringCoverTextForm">
+												<table>
+													<tr>
+														<td><input type="radio" name="ringCoverText" value="standard" onclick="changeText('ringCoverText','rc_custom_text_main','rc_custom_text_detail','ringCoverTextAreaDetail')" checked /></td><td>Standard</td>
+													</tr>
+													<tr>
+														<td><input type="radio" name="ringCoverText" value="script" onclick="changeText('ringCoverText','rc_custom_text_main','rc_custom_text_detail','ringCoverTextAreaDetail')" /></td><td>Script</td>
+													</tr>
+												</table>
+											</form>
+											<span class="current_logo_color"></span>
+											<span id="ringCoverTitle" class="logo_color_list_title">Logo Colors</span>
+											<div class="logo_colors">
+												<ul></ul>
+											</div>
+											<div id="rcTextAreaInput">
+													<tr>
+														<td><label>Text 1:</label></td><td> <input type="text" name="rcText01" id="rFlapText01" placeholder="Custom" onkeyup="updateText(this, 'rc_ct01','main_rc_ct01')"></td>
+													</tr>
+													<tr>
+														<td><label>Text 2:</label></td><td> <input type="text" name="rcText02" placeholder="Name" onkeyup="updateText(this, 'rc_ct02','main_rc_ct02')"></td>
+													</tr>
+													<tr>
+														<td><label>Text 3:</label></td><td> <input type="text" name="rcText03" placeholder="Text" onkeyup="updateText(this, 'rc_ct03','main_rc_ct03')"></td>
+													</tr>
+													</div>
+										</div>
+										<span id="ring-cover-detail"></span>
+									</div>
+								</ul>
+							</div>
+							<div id="detail_image_holder_2" class="tab-pane">
+								<ul>
+									<div class="container">
+										<div id="logo_colors_03">
+											<form>
+												<table>
+													<tr>
+														<td><input type="radio" name="sidewall" value="left" onclick="sidewallLeftOrRight(LsidewallLogo_Text)" checked /></td><td>Left Sidewall</td>
+													</tr>
+													<tr>
+														<table id="sidewallNestLeft">
+															<tr>
+																<td><input type="radio" name="LsidewallLogo_Text" id="leftSidewallLogo_" value="logo" onclick="sidewallLogo('sidewall_left','sidewallLeftText','sidewallsTitle','sidewallLeftTextArea','sidewallLeftTextAreaDetail')" checked /></td><td>Logo</td>
+															</tr>
+															<tr>
+																<td><input type="radio" name="LsidewallLogo_Text" id="leftSidewallText_" value="text" onclick="sidewallText('LsidewallLogo_Text', 'sidewallLeftText','sidewall_left','sidewallLeftTextArea','sidewallLeftTextAreaDetail','sidewallsTitle')" /></td><td>Custom Text</td>
+															</tr>
+															<tr>
+																<table id="sidewallLeftText">
+																	<tr>
+																		<td><input type="radio" name="sidewallLeftTextChoice" value="standard" onclick="changeText('sidewallLeftTextChoice','sw_left_custom_text','sw_left_custom_text_detail','sidewallLeftTextAreaDetail')" checked /></td><td>Standard</td>
+																	</tr>
+																	<tr>
+																		<td><input type="radio" name="sidewallLeftTextChoice" value="script" onclick="changeText('sidewallLeftTextChoice','sw_left_custom_text','sw_left_custom_text_detail','sidewallLeftTextAreaDetail')" /></td><td>Script</td>
+																	</tr>
+																</table>
+															</tr>
+														</table>
+													</tr>
+												</table>
+												<table>
+													<tr>
+														<td><input type="radio" name="sidewall" value="right" onclick="sidewallLeftOrRight(RsidewallLogo_Text)" /></td><td>Right Sidewall</td>
+													</tr>
+													<tr>
+														<table id="sidewallNestRight">
+															<tr>
+																<td><input type="radio" name="RsidewallLogo_Text" id="rightSidewallLogo_" value="logo" onclick="sidewallLogo('sidewall_right','sidewallRightText','sidewallsTitle','sidewallRightTextArea','sidewallRightTextAreaDetail')" checked /></td><td>Logo</td>
+															</tr>
+															<tr>
+																<td><input type="radio" name="RsidewallLogo_Text" id="rightSidwallText_" value="text" onclick="sidewallText('RsidewallLogo_Text','sidewallRightText','sidewall_right','sidewallRightTextArea','sidewallRightTextAreaDetail','sidewallsTitle')" /></td><td>Custom Text</td>
+															</tr>
+															<tr>
+																<table id="sidewallRightText">
+																	<tr>
+																		<td><input type="radio" name="sidewallRightTextChoice" value="standard" onclick="changeText('sidewallRightTextChoice','sw_right_custom_text','sw_right_custom_text_detail','sidewallRightTextAreaDetail')" checked /></td><td>Standard</td>
+																	</tr>
+																	<tr>
+																		<td><input type="radio" name="sidewallRightTextChoice" value="script" onclick="changeText('sidewallRightTextChoice','sw_right_custom_text','sw_right_custom_text_detail','sidewallRightTextAreaDetail')" /></td><td>Script</td>
+																	</tr>
+																</table>
+															</tr>
+														</table>
+													</tr>
+												</table>
+											</form>
+											<span class="current_logo_color"></span>
+											<span id="sidewallsTitle" class="logo_color_list_title">Logo Colors</span>
+											<div class="logo_colors">
+												<ul></ul>
+											</div>
+										</div>
+										<span id="sidewall-detail"></span>
+									</div>
+								</ul>
+							</div>
+							<div id="detail_image_holder_3" class="tab-pane"><ul><span id="handle-detail-right-inner"></span><span id="handle-detail-left-inner"></span></ul></div>
+							<div id="detail_image_holder_4" class="tab-pane"><ul><span id=""></span></ul></div>
+						</div><!-- tab content -->
+						</div><!-- tab menu -->
+					</div><!--container-->
+				</div><!-- column -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</div><!-- bottom detail holder -->
+	
+	</div> <!--  Holder ---- My outermost container -->
+<canvas id="canvas"></canvas>
+
+<script>
+
+	var spacer_group, metal_d_ring, res_handle, hres_group, Hacky, FF_Handle, BOC, pinstripes_3, pinstripes_5, ColorMainStripe;
+	var display_diagram = document.getElementById("diag_show_hide");
+	var display_spacer_foam = document.getElementById("spacer_show_hide");
+	var metal_d_ring_option = document.getElementById("res_metal_dring");
+	var deployment_option = document.getElementById("main-release");
+	var pinstripe_option = document.getElementById("add-pinstripes");
+	var mainHolder, colorHolder;
+	var btnClear, btnDownloadSVG, btnDownloadPNG;
+	var svgObject, svgObject2, svgOutline, svgColor, svgURL;
+	var svgrFlapDetailDocInit;
+	var fillSpeed = 0.15;
+	var chosenColor = '#FFFFFF';
+	var text_list = document.getElementsByTagName("text");
+	var pointers_list = document.getElementsByTagName("path");
+	var _color_name = '';
+	var _color = '';
+	var closeOffset;
+	var trim = '';
+	var logoClass;
+	var has_detail_area = false;
+	var svgDoc, flapSvgDoc, z;
+	var mainSvgDocx = ' ';
+	
+	
+	function updateText(sender, detailTargetID,mainTargetID){
+		var text = $(sender).val();
+		var f = $("#rFlapDetail");
+		var g = $("#mainDocx");
+		var textNodeMain = g.context.querySelector("#"+mainTargetID)
+		var textNodeDetail = f.context.querySelector("#"+detailTargetID);
+		textNodeDetail.textContent = text;
+		textNodeMain.textContent = text;
+		
+	}
+	
+	
+	function ColorDetailElement(mainID, docID){
+		if(mainID == 'grp_2'){
+				f = document.querySelector("#sidewallDetail");
+				elem = f.getElementById("grp_2_sidewall_detail-fabric");
+				elem.setAttribute("display","none");
+				detail_area = f.querySelector("#grp_2_sidewall_detail_path");
+				detail_area.style.fill = chosenColor;
+			}else{
+				var f = document.querySelector("svg#"+docID);
+				var fabric_elem = f.getElementById(mainID+'_detail-fabric');
+				fabric_elem.setAttribute("display","none");
+				var elem = f.getElementById(mainID+'_detail_path');
+				elem.style.fill = chosenColor;
+			}
+	}
+	function colorPinstripe(stripe, stripeID){
+		stripe.style.fill = chosenColor;
+		svg = $("#mainDocx");
+		var svgDocX = svg.context;
+		var tmp = stripeID;
+		var mainStripe = tmp.replace('_detail', "");
+		ColorMainStripe = document.querySelector("#"+mainStripe);
+		ColorMainStripe.style.fill = chosenColor;
+	}
+	$('.nav-tabs a').click(function(e) {
+		e.preventDefault();
+		$(this).tab('show');
+		chosenColor = '#ffffff';
+	})
+	$(display_spacer_foam).on("click", function(){
+		if(display_spacer_foam.checked == true){
+			spacer_group.setAttribute('visibility', 'visible');
+		}else{
+			spacer_group.setAttribute('visibility', 'hidden');
+		}
+	});
+	$(metal_d_ring_option).on("click", function(){
+		if(metal_d_ring_option.checked == true){
+			metal_d_ring.setAttribute('display', 'inline');
+			hres_group.setAttribute('display', 'none');
+		}else{
+			metal_d_ring.setAttribute('display', 'none');
+			hres_group.setAttribute('display', 'inline');
+		}
+	});
+	$(display_diagram).on("click", function(){
+		if(display_diagram.checked == true){
+			for(var text=0;text<text_list.length;text++){
+				if(text_list[text].getAttribute("class") == 'labels'){
+					$(text_list[text]).css("display", "none");
+				}
+			}
+		}else{
+			for(var text=0;text<text_list.length;text++){
+				if(text_list[text].getAttribute("class") == 'labels'){
+					$(text_list[text]).css("display", "block");
+				}
+			}
+		}
+	});
+	
+	$(pinstripe_option).on("click", function(){
+		var f = document.querySelector("#rFlapDetail");
+		//console.log("F: "+f);
+		var grp5DetailPinstripes = f.querySelector("#grp_5_detail_pinstripes");
+		var grp3DetailPinstripes = f.querySelector("#grp_3_detail_pinstripes");
+		var pinstripeInstruction = document.getElementById("pinstripe-instruction");
+		if(pinstripe_option.checked==true){
+			pinstripes_3.setAttribute("display","inline");
+			pinstripes_5.setAttribute("display","inline");
+			grp3DetailPinstripes.setAttribute("display","inline");
+			grp5DetailPinstripes.setAttribute("display","inline");
+			pinstripeInstruction.style.display="inline";
+			lockPinstripes();
+		}else{
+			pinstripes_3.setAttribute("display","none");
+			pinstripes_5.setAttribute("display","none");
+			grp3DetailPinstripes.setAttribute("display","none");
+			grp5DetailPinstripes.setAttribute("display","none");
+			lockPinstripes();
+		}
+	});
+	
+	function unlockPinstripes(){
+		var f = document.getElementById("rFlapDetail");
+		var not_pinstripes = f.querySelectorAll("path:not(.pinstripe), polygon:not(.pinstripe)");
+		var pinstripes = f.querySelectorAll(".pinstripe");
+		for(var i=0;i<not_pinstripes.length;i++){
+			$(not_pinstripes[i]).css("pointer-events","none");
+		}
+		for(i=0;i<pinstripes.length;i++){
+			$(pinstripes[i]).css("pointer-events","auto");
+		}
+	}
+	function lockPinstripes(){
+		var f = document.getElementById("rFlapDetail");
+		var not_pinstripes = f.querySelectorAll("path:not(.pinstripe), polygon:not(.pinstripe)");
+		var pinstripes = f.querySelectorAll(".pinstripe");
+		for(var i=0;i<not_pinstripes.length;i++){
+			$(not_pinstripes[i]).css("pointer-events","auto");
+		}
+		for(i=0;i<pinstripes.length;i++){
+			$(pinstripes[i]).css("pointer-events","none");
+		}
+	}
+	function makePinstripeColors(){
+		var stripeColorsList = $('#stripe_colors ul');
+		for(i in colors[0]){
+			var current_color_hex = colors[0][i].cValue;
+			var stripeSwatch = $('<li/>').appendTo(stripeColorsList);
+			$(stripeSwatch).css('background-color', current_color_hex);
+			$(stripeSwatch).data('color', current_color_hex);
+			$(stripeSwatch).on('click', stripeSwatchClick);
+			$(stripeSwatch).on('mouseenter mouseleave', colorRollover);
+		}
+		$(stripeColorsList).append('</ul>');
+		$('.current_logo_color').css("background-color", "#000");
+		
+	}
+	
+	function displayPinstripeColors(){
+		$("#resFlapTextAreaInput").css("display","none");
+		$("#rFlapTextForm").css("display","none");
+		var colors_title = document.getElementById("rFlapTitle");
+		$('.logo_colors').css("display","none");
+		$('#stripe_colors').css("display","block");
+		colors_title.innerHTML = "Pinstripe Colors";
+		unlockPinstripes();
+	}
+	
+	function mainReleaseOption(ID){
+		switch(ID){
+			case "BOC":
+				BOC.setAttribute("display", "inline");
+				FF_Handle.setAttribute("display","none");
+				Hacky.setAttribute("display","none");
+				break;
+			case "freeFly":
+				BOC.setAttribute("display", "none");
+				FF_Handle.setAttribute("display","inline");
+				Hacky.setAttribute("display","none");
+				break;
+			case "hacky":
+				BOC.setAttribute("display", "none");
+				FF_Handle.setAttribute("display","none");
+				Hacky.setAttribute("display","inline");
+				break;
+		}
+	}
+
+
+	var colors = [
+	cordura = [
+		{catName: "Cordura"},
+		{color:'White', cValue:'#ffffff'},
+		{color:'Medium Blue', cValue:'#5b80f0'},
+		{color:'Neon Green', cValue:'#5bc762'},
+		{color:'Red', cValue:'#b00002 '},
+		{color:'Silver', cValue:'#adafbc '},
+		{color:'Teal', cValue:'#22a1af'},
+		{color:'Neon Yellow', cValue:'#e3ff46'},
+		{color:'Burgundy', cValue:'#91323e'},
+		{color:'Dark Grey', cValue:'#494b51'},
+		{color:'Jade', cValue:'#006b56'},
+		{color:'Yellow', cValue:'#f0d202'},
+		{color:'Purple', cValue:'#4f2468'},
+		{color:'Black', cValue:'#000000'},
+		{color:'Olive Drab', cValue:'#56562e'},
+		{color:'Gold', cValue:'#ddbd2c'},
+		{color:'Pink', cValue:'#ffced6'},
+		{color:'Navy Blue', cValue:'#1e254e'},
+		{color:'Forest Green', cValue:'#3c5b52'},
+		{color:'Orange', cValue:'#e86f16'},
+		{color:'Fuschia', cValue:'#c0085d'},
+		{color:'Royal Blue', cValue:'#2e49bd'},
+		{color:'Kelly Green', cValue:'#2e7d51'},
+		{color:'Neon Orange', cValue:'#ff4600'},
+		{color:'Neon Pink', cValue:'#f91061'},
+		{color:'Woodland Camo', cValue:'url(#woodland_camo)', link:'url("http://skydivewings.com/wordpress/wp-content/uploads/camo/color_woodland_camo-150x150.jpg")'},
+		{color:'Desert Camo', cValue:'url(#desert_camo)', link:'url("http://skydivewings.com/wordpress/wp-content/uploads/camo/color_desert_camo-150x150.jpg")'},
+		{color:'Digital Camo', cValue:'url(#digital_camo)', link:'url("http://skydivewings.com/wordpress/wp-content/uploads/camo/color_digital_camo-150x150.jpg")'},
+		{color:'Multi Camo', cValue:'url(#multi_camo)', link:'url("http://skydivewings.com/wordpress/wp-content/uploads/camo/color_multi_cam-150x150.jpg")'},
+	],
+	parapack = [
+		{catName: "Parapack"},
+		{color:'White', cValue:'#ffffff'},
+		{color:'Light Blue', cValue:'#5797c6'},
+		{color:'Burgundy', cValue:'#91323e'},
+		{color:'Silver', cValue:'#adafbc'},
+		{color:'Teal', cValue:'#22a1af'},
+		{color:'Jade', cValue:'#006b56'},
+		{color:'Dark Grey', cValue:'#494b51'},
+		{color:'Black', cValue:'#000000'},
+		{color:'Yellow', cValue:'#f0d202'},
+		{color:'Royal Blue', cValue:'#2e49bd'},
+		{color:'Neon Orange', cValue:'#ff4600'},
+		{color:'Electric Blue', cValue:'#195eb9'},
+		{color:'Red', cValue:'#b00002 '}
+	],
+	tie_dye = [
+		{catName: "Tie-Dye"},
+		{color:'Dark Grey', cValue:'#494b51'},
+		{color:'Magenta', cValue:'#d0417e'},
+		{color:'Black', cValue:'#000000'},
+		{color:'Red', cValue:'#b00002 '},
+		{color:'Navy Blue', cValue:'#1e254e'},
+		{color:'Royal Blue', cValue:'#2e49bd'},
+		{color:'Jade', cValue:'#006b56'},
+		{color:'Purple', cValue:'#4f2468'}
+	],
+	harness = [
+		{catName: "Harness"},
+		{color:'White', cValue:'#ffffff'},
+		{color:'Light Blue', cValue:'#5797c6'},
+		{color:'Burgundy', cValue:'#91323e'},
+		{color:'Red', cValue:'#b00002 '},
+		{color:'Silver', cValue:'#adafbc'},
+		{color:'Olive Drab', cValue:'#56562e'},
+		{color:'Purple', cValue:'#4f2468'},
+		{color:'Dark Grey', cValue:'#494b51'},
+		{color:'Kelly Green', cValue:'#2e7d51'},
+		{color:'Black', cValue:'#000000'},
+		{color:'Yellow', cValue:'#f0d202'},
+		{color:'Navy Blue', cValue:'#1e254e'},
+		{color:'Gold', cValue:'#ddbd2c'},
+		{color:'Royal Blue', cValue:'#2e49bd'},
+		{color:'Orange', cValue:'#e86f16'}
+	],
+	binding_tape = [
+		{catName: "Binding Tape"},
+		{color:'White', cValue:'#ffffff'},
+		{color:'Florescent Turquoise', cValue:'#06bab1'},
+		{color:'Kelly Green', cValue:'#2e7d51'},
+		{color:'Jade', cValue:'#006b56'},
+		{color:'Burgundy', cValue:'#91323e'},
+		{color:'Neon Orange', cValue:'#ff4600'},
+		{color:'Fuschia', cValue:'#c0085d'},
+		{color:'Silver', cValue:'#adafbc'},
+		{color:'Light Blue', cValue:'#5797c6'},
+		{color:'Neon Green', cValue:'#5bc762'},
+		{color:'Red', cValue:'#b00002 '},
+		{color:'Neon Pink', cValue:'#f91061'},
+		{color:'Dark Grey', cValue:'#494b51'},
+		{color:'Teal', cValue:'#22a1af'},
+		{color:'Neon Yellow', cValue:'#e3ff46'},
+		{color:'Burgundy', cValue:'#91323e'},
+		{color:'Black', cValue:'#000000'},
+		{color:'Jade', cValue:'#006b56'},
+		{color:'Yellow', cValue:'#f0d202'},
+		{color:'Purple', cValue:'#4f2468'},
+		{color:'Navy Blue', cValue:'#1e254e'},
+		{color:'Olive Drab', cValue:'#56562e'},
+		{color:'Gold', cValue:'#ddbd2c'},
+		{color:'Lavender', cValue:'#9e78c1'},
+		{color:'Royal Blue', cValue:'#2e49bd'},
+		{color:'Forest Green', cValue:'#3c5b52'},
+		{color:'Orange', cValue:'#e86f16'},
+		{color:'Pink', cValue:'#ffced6'}
+	]
+	];
+	
+	var min = 10;
+	var max = 120;
+	function randomRotation(min,max)
+	{
+		return Math.floor(Math.random()*(max-min+1)+min);
+	}
+
+	function makeLogoSwatchesRingCover(){
+		var logoColorsList = $('#logo_colors_02  ul');
+		for(i in colors[0]){
+			var current_color_hex = colors[0][i].cValue;
+			var logoSwatch = $('<li/>').appendTo(logoColorsList);
+			$(logoSwatch).css('background-color', current_color_hex);
+			$(logoSwatch).data('color', current_color_hex);
+			$(logoSwatch).on('click', logoSwatchClickRingCover);
+			$(logoSwatch).on('mouseenter mouseleave', colorRollover);
+		}
+		$(logoColorsList).append('</ul>');
+		$('.current_logo_color').css("background-color", "#000");
+
+	}
+
+	function makeLogoSwatchesRFlap(){
+	var logoColorsList = $('#logo_colors_01 .logo_colors  ul');
+	var i = 1;
+	for(i in colors[0]){
+		var current_color_hex = colors[0][i].cValue;
+		var logoSwatch = $('<li/>').appendTo(logoColorsList);
+		$(logoSwatch).css('background-color', current_color_hex);
+		$(logoSwatch).data('color', current_color_hex);
+		$(logoSwatch).on('click', logoSwatchClickRFlap);
+		$(logoSwatch).on('mouseenter mouseleave', colorRollover);
+		}
+		$(logoColorsList).append('</ul>');
+		$('.current_logo_color').css("background-color", "#000");
+		//$('.current_logo_color').append("Black");
+
+	}
+
+
+	function makeLogoSwatchesSidewall(){
+		var logoColorsList = $('#logo_colors_03  ul');
+		var i = 1;
+		for(i in colors[0]){
+			var current_color_hex = colors[0][i].cValue;
+			var logoSwatch = $('<li/>').appendTo(logoColorsList);
+			$(logoSwatch).css('background-color', current_color_hex);
+			$(logoSwatch).data('color', current_color_hex);
+			$(logoSwatch).on('click', logoSwatchClickSidewall);
+			$(logoSwatch).on('mouseenter mouseleave', colorRollover);
+			}
+			$(logoColorsList).append('</ul>');
+			$('.current_logo_color').css("background-color", "#000");
+			$('.current_logo_color').append("Black");
+
+	}
+	function changeText(name, txtArea, txtAreaDetail,txtAreaDetailText){
+		var textSelection = $('input[name="'+name+'"]:checked').val();
+		
+		switch(name){
+			case 'rFlap':
+				var f = $("#rFlapDetail");
+				break;
+			case 'ringCover':
+				var f = $("#ringCover");
+				break;
+			default:
+				var f = $("#sidewallDetail");
+				break;
+		}
+		var textAreaText = f.context.querySelectorAll("#"+txtArea+" text");
+		var textArea = f.context.querySelector("#"+txtArea);
+		var textAreaDetailText = f.context.querySelectorAll("#"+txtAreaDetail+" text");
+		var textAreaDetail = f.context.querySelectorAll("#"+txtAreaDetail);
+		var i;
+		if(textSelection == 'standard'){
+		
+			if(name=='sidewallRightTextChoice' || name=='sidewallLeftTextChoice'){
+				var textArea = f.context.querySelector("#"+txtArea);
+				var textAreaDetail = f.context.querySelector("#"+txtAreaDetail);
+				textAreaDetail.css("font-family","Russo One");
+				textArea.css("font-family","Russo One");
+				textArea.style.fontWeight='normal';
+				textArea.style.marginTop='10px';
+				if(name=='sidewallRightTextChoice')
+					textArea.style.marginLeft='0';
+				textAreaDetail.style.fontWeight='normal';
+				textAreaDetail.style.marginLeft='0';
+				textAreaDetail.style.marginTop='0';
+				textArea.style.fontSize='1em';
+				textAreaDetail.style.fontSize='1em';
+			}else{
+				for(i=0;i<textAreaDetailText.length;i++){
+				textAreaDetailText[i].setAttribute('font-family','Russo One');
+				textAreaText[i].setAttribute('font-family','Russo One');
+				}
+			
+				switch(name){
+					case 'rFlapText':
+						textArea.style.marginLeft='10px';
+						textArea.style.fontSize='.8em';
+						textAreaDetail.style.marginLeft="0";
+						for(i=0;i<textAreaDetailText.length;i++){
+							textAreaDetailText[i].style.fontSize="1.5em";
+							textAreaDetailText[i].style.fontWeight="normal";
+						}
+
+						break;
+					case 'ringCoverText':
+					for(i=0;i<textAreaDetailText.length;i++){
+							textAreaDetailText[i].style.fontSize="1em";
+							textAreaDetailText[i].style.fontWeight="normal";
+						}
+						for(i=0;i<textAreaText.length;i++){
+							textAreaText[i].style.fontSize=".4em";
+							textAreaText[i].style.fontWeight="normal";
+						}
+						textArea.style.marginLeft='5px';
+						textAreaDetail.style.marginLeft="0";
+						break;
+					
+				}
+			}
+			
+
+		}
+		if(textSelection == 'script'){
+			if(name=='sidewallRightTextChoice' || name=='sidewallLeftTextChoice'){
+				textAreaDetail.setAttribute("font-family", "Rouge Script");
+				textArea.setAttribute("font-family","Rouge Script");
+				textArea.style.fontSize='1.5em';
+				textArea.style.marginLeft="0";
+				textArea.style.fontWeight='bold';
+				if(name=='sidewallRightTextChoice')
+					textArea.style.marginLeft='10px';
+				textArea.style.marginTop='-10px';
+				textAreaDetail.style.marginLeft="20px";
+				textAreaDetail.style.marginTop='-10px';
+				textAreaDetail.style.fontSize="1em";
+			}else{
+				for(i=0;i<textAreaDetailText.length;i++){
+				textAreaDetailText[i].setAttribute('font-family','Rouge Script');
+				textAreaText[i].setAttribute("font-family",'Rouge Script');
+			}
+			
+			switch(name){
+				case 'rFlapText':
+					textArea.style.fontSize='1.4em';
+					textArea.style.marginLeft="10px";
+					textAreaDetail.style.marginLeft="-20px";
+					for(i=0;i<textAreaDetailText.length;i++){
+						textAreaDetailText[i].style.fontSize="2.5em";
+						textAreaDetailText[i].style.fontWeight="bold";
+					}
+					
+					break;
+				case 'ringCoverText':
+					textArea.style.fontSize='1em';
+					textArea.style.marginLeft="9px";
+					textAreaDetail.style.marginLeft="0";
+						for(i=0;i<textAreaDetailText.length;i++){
+						textAreaDetailText[i].style.fontSize="2em";
+						textAreaDetailText[i].style.fontWeight="bold";
+					}
+					textAreaDetailText[0].setAttribute("transform","matrix(1 0 0 -1 0 52)");
+					textAreaDetailText[1].setAttribute("transform","matrix(1 0 0 -1 0 -52)");
+					textAreaDetailText[2].setAttribute("transform","matrix(1 0 0 -1 0 -152)");
+					break;
+			}
+			}
+			
+
+
+		}
+	}
+	function sidewallLeftOrRight(name){
+		var sidewallSelection = $('input[name="sidewall"]:checked').val();
+		var textSelectionCheck = $('input[name="'+name+'"]:checked').val();
+		var leftSideText = document.getElementById("sidewallLeftText");
+		var rightSideText = document.getElementById("sidewallRightText");
+		if(sidewallSelection == 'left'){
+			sidewallNestRight.style.display='none';
+			sidewallNestLeft.style.display='block';
+			if(textSelectionCheck == 'text'){
+				leftSideText.style.display='block';
+			}else{
+				leftSideText.style.display='none';
+			}
+			rightSideText.style.display='none'
+		}else{
+			sidewallNestRight.style.display='block';
+			sidewallNestLeft.style.display='none';
+			if(textSelectionCheck == 'text'){
+				rightSideText.style.display='block';
+			}else{
+				rightSideText.style.display='none';
+			}
+			leftSideText.style.display='none';
+		}
+	}
+	function sidewallText(name,sidewallTextTarget,targetLogoClass,txtArea,txtAreaDetail,titleID){
+		var sidewallSelection = $('input[name="'+name+'"]:checked').val();
+		var sidewallTextSelection = document.getElementById(sidewallTextTarget);
+		var colors_title = document.getElementById(titleID);
+		var f = $("#mainDocx");
+		var textArea = f.context.getElementById(txtArea);
+		var textAreaDetail = document.getElementById(txtAreaDetail);
+
+		if(sidewallSelection == 'text'){
+			sidewallTextSelection.style.display = 'block';
+			var pieces = document.querySelectorAll('.'+targetLogoClass);
+			for(var a=0;a<pieces.length;a++){
+				pieces[a].style.display="none";
+			}
+			colors_title.innerHTML = "Text Colors";
+			textArea.style.display="block";
+			textAreaDetail.style.display="block";
+		}
+	}
+	function sidewallLogo(targetLogoClass,sidewallTextTarget,titleID,txtArea,txtAreaDetail){
+		var sidewallTextSelection = document.getElementById(sidewallTextTarget);
+		var colors_title = document.getElementById(titleID);
+		var textArea = document.getElementById(txtArea);
+		var textAreaDetail = document.getElementById(txtAreaDetail);
+		var pieces = document.querySelectorAll('.'+targetLogoClass);
+		colors_title.innerHTML = "Logo Colors";
+		sidewallTextSelection.style.display = 'none';
+		textArea.style.display="none";
+		textAreaDetail.style.display="none";
+		for(var a=0;a<pieces.length;a++){
+			pieces[a].style.display="block";
+		}
+	}
+	function LogoOrText(name,txtAreaInput, txtArea,txtAreaDetail,scriptOrBlockID,targetLogoClass,titleID){
+		var selection = $('input[name="'+name+'"]:checked').val();
+		var textAreaInput = document.querySelector("#"+txtAreaInput);
+		if(name == 'rFlap'){
+			var f = $("#rFlapDetail");
+		}
+		if(name == 'ringCover'){
+			var f = $("#ringCoverDetail");
+		}
+		var g = $("#mainDocx");
+		var textArea = g.context.querySelector("#"+txtArea);
+		var textAreaDetail =  f.context.getElementById(txtAreaDetail);
+		var scriptOrBlockRadios = document.getElementById(scriptOrBlockID);
+		var colors_title = document.getElementById(titleID);
+		lockPinstripes();
+		$("#stripe_colors").css("display","none");
+		$("#logo_colors_01 .logo_colors").css("display","block");
+		if(selection == 'text'){
+			var pieces = document.querySelectorAll('.'+targetLogoClass);
+			for(var a=0;a<pieces.length;a++){
+				pieces[a].style.display="none";
+			}
+			colors_title.innerHTML = "Text Colors";
+			textArea.setAttribute("display", "inline");
+			textAreaInput.style.display="block";
+			textAreaDetail.style.display="block";
+			scriptOrBlockRadios.style.display="block";
+		}
+		if(selection == 'logo'){
+			var pieces = document.querySelectorAll('.'+targetLogoClass);
+			for(var a=0;a<pieces.length;a++){
+				pieces[a].style.display="block";
+			}
+			colors_title.innerHTML = "Logo Colors";
+			textArea.setAttribute("display","none");
+			textAreaInput.style.display="none";
+			textAreaDetail.style.display="none";
+			scriptOrBlockRadios.style.display="none";
+		}
+	}
+
+
+		//curLogoColor.empty();
+		//chosenColor = $(this).data('color');
+		//curLogoColor.css("background-color", chosenColor);
+		//_color_name = findColorName(chosenColor);
+		//$(curLogoColor).append(_color_name);
+
+	var curLogoColor = $('.current_logo_color');
+	
+	function stripeSwatchClick(){
+		curLogoColor.empty();
+		chosenColor = $(this).data('color');
+		curLogoColor.css("background-color", chosenColor);
+		
+		_color_name = findColorName(chosenColor);
+		$(curLogoColor).append(_color_name);
+	}
+
+	function logoSwatchClickRFlap(){
+		var pieces = document.querySelectorAll('.r_flap_logo');
+		var f = $('#rFlapDetail');
+		var g = $('#mainDocx');
+		var mainTextFlap = g.context.querySelector('#resFlapTextArea use');
+		var detailText = f.context.querySelector('#resFlapTextAreaDetail use');
+		curLogoColor.empty();
+		chosenColor = $(this).data('color');
+		curLogoColor.css("background-color", chosenColor);
+		
+		_color_name = findColorName(chosenColor);
+		$(curLogoColor).append(_color_name);
+		for(var a=0;a<pieces.length;a++){
+			pieces[a].style.fill = chosenColor;
+		}
+			detailText.style.fill=chosenColor;
+			mainTextFlap.style.fill=chosenColor;
+	}
+	function logoSwatchClickSidewall(){
+		var side = $('input[name="sidewall"]:checked').val();
+		if(side == 'left'){
+			var pieces = document.querySelectorAll('.sidewall_left');
+		}
+		if(side == 'right'){
+			var pieces = document.querySelectorAll('.sidewall_right');
+		}
+		curLogoColor.empty();
+		chosenColor = $(this).data('color');
+		curLogoColor.css("background-color", chosenColor);
+		_color_name = findColorName(chosenColor);
+		$(curLogoColor).append(_color_name);
+		for(var a=0;a<pieces.length;a++){
+			pieces[a].style.fill = chosenColor;
+		}
+	}
+	function logoSwatchClickRingCover(){
+		var pieces = document.querySelectorAll('.ring_cover_logo');
+		var  f = $('#ringCoverDetail');
+		var g = $('#mainDocx');
+		var rcTextArea = g.context.querySelector('#ringCoverTextArea use');
+		var rcDetailText = f.context.querySelector('#ringCoverTextAreaDetail use');
+		curLogoColor.empty();
+		chosenColor = $(this).data('color');
+	
+		curLogoColor.css("background-color", chosenColor);
+		_color_name = findColorName(chosenColor);
+		$(curLogoColor).append(_color_name);
+		for(var a=0;a<pieces.length;a++){
+			pieces[a].style.fill = chosenColor;
+		}
+		rcTextArea.style.fill=chosenColor;
+		rcDetailText.style.fill=chosenColor;
+	}
+
+	$.fn.makeSwatches = function() {
+		var list_id=0;
+		var i = 0;
+		for(i in colors){
+			for(j=1;j<colors[i].length;j++){
+				var tab_div = $('#colors_'+i+' > ul#'+i);
+				_color = colors[i][j].cValue;
+				_color_name = findColorName(_color);
+				var swatch = $('<li id="listID_'+list_id+'"/>').appendTo(tab_div);
+				if(_color_name == 'Woodland Camo' || _color_name == "Digital Camo" || _color_name == "Multi Camo" || _color_name == "Desert Camo"){
+					var link = colors[i][j].link;
+					$(swatch).css('background', link);
+					$(swatch).data('color', _color);
+				}else{
+					$(swatch).css('background', _color);
+					$(swatch).data('color', _color);
+				}
+
+
+				if(i==0 || i==1 || i==2){
+					$(swatch).on('click', swatchClick);
+				}
+				if(i==3){
+					$(swatch).on('click', swatchClickHarness);
+				}
+				if(i==4){
+					$(swatch).on('click', swatchClickTrim);
+					}
+					$(swatch).on('mouseenter mouseleave', colorRollover);
+					list_id++;
+					if(j == colors[i].length-1){
+						list_id++;
+						swatch = $('<li class="currentColor"/>').appendTo(tab_div);
+						$(swatch).css("background", chosenColor);
+						$(swatch).data('color', _color);
+				}
+			}
+			$('#listID_'+i).append('</ul>');
+		}
+
+
+		//var swatchPos = $('.theColorHolder').position();
+		//var swatchHeight = $('.theColorHolder').outerHeight(true) + swatchPos.top;
+		//closeOffset = swatchHeight - $('.theSwatchHolder').outerHeight();
+
+		/* $('.theSwatchHolder').on('mouseenter mouseleave', swatchMove);
+		$('.theSwatchHolder').css('bottom',closeOffset);
+		swatchUp   = {css:{bottom:0}};
+		swatchDown = {css:{bottom:closeOffset}};
+		$('.theSwatchHolder').append('</ul>');*/
+	}
+
+	var click_loop_ran = false;
+	var harness_loop_ran = false;
+	var trim_loop_ran = false;
+
+	function clearIndicator(){
+		var colorIndicator = document.querySelectorAll(".currentColor");
+		$(colorIndicator).empty();
+		$('.currentColor').css("background-color", "#000");
+		$('.currentColor').append("Black");
+	}
+
+	function clearLogoIndicator(swatchDIV_ID){
+		var colorIndicator = document.querySelectorAll(".current_logo_color");
+		var show_swatches = document.querySelector("#"+swatchDIV_ID+" .logo_colors");
+		$(colorIndicator).empty();
+		$('.current_logo_color').css("background-color", "#000");
+		$('.current_logo_color').append("Black");
+		console.log("with: "+$(show_swatches));
+		console.log("without: "+show_swatches);
+		if(swatchDIV_ID == 'logo_colors_02' || swatchDIV_ID == 'logo_colors_03'){
+			show_swatches.style.display="block";
+		}
+		
+
+	}
+
+	function swatchClick(){
+		var current_list = this.parentNode.getAttribute('id');
+		var camoSwatch = this.getAttribute('id');
+		var colorIndicator = document.querySelectorAll(".currentColor");
+		$(colorIndicator).empty();
+		chosenColor = $(this).data('color');
+		$(colorIndicator[current_list]).css('background', chosenColor);
+		
+		switch(camoSwatch){
+			case 'listID_24':
+				_color_name = "Woodland Camo";
+				var indChosenColor = 'url("http://skydivewings.com/wordpress/wp-content/uploads/camo/color_woodland_camo-150x150.jpg")';
+				$(colorIndicator[current_list]).css('background', indChosenColor);
+				break;
+			case 'listID_25':
+				_color_name = "Desert Camo";
+				var indChosenColor = 'url("http://skydivewings.com/wordpress/wp-content/uploads/camo/color_desert_camo-150x150.jpg")';
+				$(colorIndicator[current_list]).css('background', indChosenColor);
+				break;
+			case 'listID_26':
+				_color_name = "Digital Camo";
+				var indChosenColor = 'url("http://skydivewings.com/wordpress/wp-content/uploads/camo/color_digital_camo-150x150.jpg")';
+				$(colorIndicator[current_list]).css('background', indChosenColor);
+				break;
+			case 'listID_27':
+				_color_name = "Multi Camo";
+				var indChosenColor =  'url("http://skydivewings.com/wordpress/wp-content/uploads/camo/color_multi_cam-150x150.jpg")'
+				$(colorIndicator[current_list]).css('background', indChosenColor);
+				break;
+			default:
+				_color_name = findColorName(chosenColor);
+		}
+
+		$(colorIndicator).append(_color_name);
+		harness_loop_ran = false;
+		trim_loop_ran = false;
+		if(click_loop_ran == false){
+			click_loop_ran = true;
+			var belems = document.querySelectorAll('#harness, .trim');
+			for(var a=0;a<belems.length;a++){
+				$(belems[a]).css("pointer-events", "none");
+		}
+		var celems = document.querySelectorAll('path:not(#harness):not(.trim)');
+		for(var a=0;a<celems.length;a++){
+			$(celems[a]).css("pointer-events", "auto");
+		}
+	}
+
+	}
+	function swatchClickHarness(){
+		var current_list = this.parentNode.getAttribute('id');
+		var colorIndicator = document.querySelectorAll(".currentColor");
+		$(colorIndicator).empty();
+		chosenColor = $(this).data('color');
+		$(colorIndicator[current_list]).css('background-color', chosenColor);
+		_color_name = findColorName(chosenColor);
+		$(colorIndicator).append(_color_name);
+		var the_harness = document.querySelectorAll(".harness");
+
+		for(a=0;a<the_harness.length;a++){
+			the_harness[a].style.fill = chosenColor;
+		}
+
+
+		click_loop_ran = false;
+		trim_loop_ran = false;
+
+		if(harness_loop_ran == false){
+			harness_loop_ran == true;
+			Aelems = document.querySelector('path, polygon, g clip-path');
+			for(var a=0;a<Aelems.length;a++){
+				$(Aelems[a]).css("pointer-events", "none");
+			}
+
+			$("#harness").css("pointer-events", "auto");
+		}
+	}
+
+	function swatchClickTrim(){
+		var current_list = this.parentNode.getAttribute('id');
+
+		var colorIndicator = document.querySelectorAll(".currentColor");
+		$(colorIndicator).empty();
+		chosenColor = $(this).data('color');
+		$(colorIndicator[current_list]).css('background-color', chosenColor);
+		_color_name = findColorName(chosenColor);
+		$(colorIndicator).append(_color_name);
+		click_loop_ran = false;
+		harness_loop_ran = false;
+		trim = document.querySelectorAll('.trim');
+		for(t=0;t<trim.length;t++){
+			trim[t].style.fill = chosenColor;
+		}
+		if(trim_loop_ran == false){
+			trim_loop_ran = true;
+			var belems = document.querySelectorAll('path:not(.trim)');
+			for(var a=0;a<belems.length;a++){
+				$(belems[a]).css("pointer-events", "none");
+			}
+			var celems = document.querySelectorAll('.trim');
+			for(var a=0;a<celems.length;a++){
+				$(celems[a]).css("pointer-events", "auto");
+			}
+		}
+	}
+
+	function findColorName(chosen_color){
+	
+		var setBreak = false;
+		for(n in colors){
+			for(k=1;k<colors[n].length;k++){
+				var compare = colors[n][k].cValue;
+				if(compare == chosen_color){
+					chosen_color = colors[n][k].color;
+					setBreak = true;
+					break;
+				}
+				if(setBreak){break;}
+			}
+			if(setBreak){break;}
+		}
+		return chosen_color;
+		}
+	function swatchMove(e){
+		var moveTo = (e.type == 'mouseenter')? swatchUp: swatchDown;
+		TweenMax.to('.tab-pane', 0.5, moveTo);
+	}
+
+	function colorMePack(poly, ID) {
+	var detail_area_ID = "#"+ID+"_detail";
+	var camo_fill = false;
+	var checkClass = document.querySelector('#'+ID).className.baseVal;
+	var image_area = document.querySelectorAll('#'+ID+' image');
+	var has_detail_area = false;
+	var documentID;
+	
+	
+	if(checkClass.includes('has_detail_area')){
+	
+		switch(checkClass){
+			case 'has_detail_area rFlap':
+				documentID = 'rFlapDetail';
+				break;
+			case 'has_detail_area ringCover':
+				documentID = 'ringCoverDetail';
+				break;
+			case 'has_detail_area sidewall':
+				documentID = 'sidewallDetail';
+				break;
+			default:
+				break;
+		}
+		has_detail_area = true;
+	}
+		
+	
+	// Detail Image Variables //
+	var f, elem, detail_image_area;
+	
+	if(chosenColor == 'url(#woodland_camo)' || chosenColor == 'url(#digital_camo)' || chosenColor == 'url(#desert_camo)' || chosenColor == 'url(#multi_cam)'){
+		switch(chosenColor){
+		case 'url(#woodland_camo)':
+			x=0;
+			for(k=0;k<image_area.length;k++){
+				image_area[k].setAttribute("xlink:href", "http://skydivewings.com/wordpress/wp-content/uploads/camo/woodland_camo_650x650.jpg");
+				image_area[k].setAttribute("x", x);
+				x+=150;
+			}
+			document.getElementById(ID+'-fabric').setAttribute("display", "inline");
+			if(has_detail_area == true){
+				f = document.querySelector("svg#"+documentID);
+				elem = f.getElementById(ID+'_detail-fabric');
+				detail_image_area = f.querySelector('#'+ID+'_detail image');
+				elem.setAttribute("display","inline");
+				detail_image_area.setAttribute("xlink:href","http://skydivewings.com/wordpress/wp-content/uploads/camo/woodland_camo_650x650.jpg");
+			}
+			if(ID == 'grp_2'){
+				f = document.querySelector("#sidewallDetail");
+				elem = f.getElementById("grp_2_sidewall_detail-fabric");
+				elem.setAttribute("display","inline");
+				detail_image_area = f.querySelector("#grp_2_sidewall_detail image");
+				detail_image_area.setAttribute("xlink:href","http://skydivewings.com/wordpress/wp-content/uploads/camo/woodland_camo_650x650.jpg");
+			}
+			camo_fill = true;
+			break;
+		case 'url(#digital_camo)':
+			x=0;
+			for(k=0;k<image_area.length;k++){
+				image_area[k].setAttribute("xlink:href", "http://skydivewings.com/wordpress/wp-content/uploads/camo/digital_camo-650x650.jpg");
+				image_area[k].setAttribute("x", x);
+				x+=150;
+			}
+			document.getElementById(ID+'-fabric').setAttribute("display", "inline");
+			if(has_detail_area){
+				f = document.querySelector("svg#"+documentID);
+				elem = f.getElementById(ID+'_detail-fabric');
+				detail_image_area = f.querySelector('#'+ID+'_detail image');
+				elem.setAttribute("display","inline");
+				detail_image_area.setAttribute("xlink:href","http://skydivewings.com/wordpress/wp-content/uploads/camo/digital_camo-650x650.jpg");
+			}	
+			if(ID == 'grp_2'){
+				f = document.querySelector("#sidewallDetail");
+				elem = f.getElementById("grp_2_sidewall_detail-fabric");
+				elem.setAttribute("display","inline");
+				detail_image_area = f.querySelector("#grp_2_sidewall_detail image");
+				detail_image_area.setAttribute("xlink:href","http://skydivewings.com/wordpress/wp-content/uploads/camo/digital_camo-650x650.jpg");
+			}
+			camo_fill = true;
+			break;
+		case 'url(#desert_camo)':
+			x=0;
+			for(k=0;k<image_area.length;k++){
+				image_area[k].setAttribute("xlink:href", "http://skydivewings.com/wordpress/wp-content/uploads/camo/desert_camo_768.png");
+				image_area[k].setAttribute("x", x);
+				x+=150;
+			}
+			document.getElementById(ID+'-fabric').setAttribute("display", "inline");
+			if(has_detail_area){
+				f = document.querySelector("svg#"+documentID);
+				elem = f.getElementById(ID+'_detail-fabric');
+				detail_image_area = f.querySelector('#'+ID+'_detail image');
+				elem.setAttribute("display","inline");
+				detail_image_area.setAttribute("xlink:href","http://skydivewings.com/wordpress/wp-content/uploads/camo/desert_camo_768.png");
+			}
+			if(ID == 'grp_2'){
+				f = document.querySelector("#sidewallDetail");
+				elem = f.getElementById("grp_2_sidewall_detail-fabric");
+				elem.setAttribute("display","inline");
+				detail_image_area = f.querySelector("#grp_2_sidewall_detail image");
+				detail_image_area.setAttribute("xlink:href","http://skydivewings.com/wordpress/wp-content/uploads/camo/desert_camo_768.png");
+			}
+			camo_fill = true;
+			break;
+		case 'url(#multi_camo)':
+			x=0;
+			for(k=0;k<image_area.length;k++){
+				image_area[k].setAttribute("xlink:href", "http://skydivewings.com/wordpress/wp-content/uploads/camo/multi_cam-650x650.jpg");
+				image_area[k].setAttribute("x", x);
+				x+=150;
+			}
+			document.getElementById(ID+'-fabric').setAttribute("display", "inline");
+			if(has_detail_area){
+				f = document.querySelector("svg#"+documentID);
+				elem = f.getElementById(ID+'_detail-fabric');
+				elem = f.getElementById("grp_2_sidewall_detail-fabric");
+				elem.setAttribute("display","inline");
+				detail_image_area.setAttribute("xlink:href","http://skydivewings.com/wordpress/wp-content/uploads/camo/multi_cam-650x650.jpg");
+			}
+			if(ID == 'grp_2'){
+				f = document.querySelector("#sidewallDetail");
+				elem = f.getElementById("grp_2_sidewall_detail-fabric");
+				elem.setAttribute("display","inline");
+				detail_image_area = f.querySelector("#grp_2_sidewall_detail image");
+				detail_image_area.setAttribute("xlink:href","http://skydivewings.com/wordpress/wp-content/uploads/camo/multi_cam-650x650.jpg");
+			}
+			camo_fill = true;
+			break;
+		}
+	}
+	else{
+			document.querySelector('#'+ID+'-fabric').setAttribute("display", "none");
+	}
+	
+		
+		if(!camo_fill){
+			poly = document.querySelector('#'+ID+' path:first-child');
+			poly.style.fill = chosenColor;
+			if(has_detail_area){
+				ColorDetailElement(ID, documentID);
+			}
+		}
+	}
+	function colorRollover(e){
+		var rollover = (e.type == 'mouseenter')? {scale:1.2}:{scale:1};
+		TweenMax.to($(this), 0.05, rollover);
+	}
+
+	function svgClear() {
+		var elems = document.querySelectorAll('path:not([fill="none"]):not(.no-clear):not([fill="#ccc"]):not(.stitching), polygon:not(.no-clear),stop:not(.no-clear), #slider');
+		var images = document.querySelectorAll('[id$="-fabric"]');
+		for(i=0;i<elems.length;i++){
+			elems[i].style.fill = '#fff';
+		}
+		i=0;
+		for(j=0;j<images.length;j++){
+			images[j].setAttribute("display","none");
+		}
+	}
+	
+	//  ******************************       Download   ********************************   //
+	
+function svgDownloadSVG() {
+		var svgInfo = $("<div/>").append($(svgObject).clone()).html();
+		
+		
+		$(this).attr({
+				href:"data:image/svg+xml;utf8,"+svgInfo,
+				download:'Product-Image.svg',
+				target:"_blank"
+		});
+	}
+
+	function loadSvg(selector, url) {
+		var target = document.querySelector(selector);
+
+		// If SVG is supported
+		if (typeof SVGRect != "undefined") {
+			// Request the SVG file
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", url + ".svg", true);
+			ajax.send();
+
+			// Append the SVG to the target
+			ajax.onload = function(e) {
+			  target.innerHTML = ajax.responseText;
+			}
+		} else {
+			// Fallback to png
+			alert("SVG Not Supported");
+			target.innerHTML = "<img src='" + url + ".png' />";
+		}
+	}
+	$.fn.makeSVGcolor = function(svgURL) {
+			mainHolder = this;
+			$( this ).load(svgURL, function() {
+			svgObject  = $('svg', this);
+			svgColor   = $('g:nth-child(2)', svgObject).children();
+			svgOutline = $('g:nth-child(1)', svgObject).children();
+			//$(svgColor).on('click', colorMePack);
+			$(mainHolder).makeSwatches();
+			$('.tab-content').addClass('gray');
+			var group_two = svgObject.context;
+			svg = svgObject;
+			BOC = group_two.querySelector("#BOC");
+			FF_Handle = group_two.querySelector("#FF_Handle");
+			Hacky = group_two.querySelector("#Hacky");
+			pinstripes_3 = group_two.querySelector("#group_3_pinstripes");
+			pinstripes_5 = group_two.querySelector("#group_5_pinstripes");
+			hres_group = group_two.querySelector("#hres_grp");
+			metal_d_ring = group_two.querySelector("#metal_d-ring");
+			spacer_group = group_two.querySelector("#spacer_foam_group");
+			spacer_group.setAttribute("visibility","hidden");
+			var group_two_elm = group_two.querySelector("#grp_2");
+			group_two_elm.addEventListener("click", function(){
+				ColorGrp2Sidewall();
+			});
+		}); 
+		return svgObject;
+	}
+	$.fn.btnClear     = function() {
+		btnClear = this;
+		$(btnClear).on('click', svgClear);
+	}
+		
+	$.fn.btnDownload  = function(type) {
+		if(type == 'PNG'){
+		  btnDownloadPNG = this;
+		  $(this).on('mouseenter', svgDownloadPNG);
+		} else {
+		  btnDownloadSVG = this;
+		  $(this).on('mouseenter', svgDownloadSVG);
+		}
+	}
+	function ColorGrp2Sidewall(){
+		var f = document.querySelector("#sidewallDetail");
+		var grp_twos = f.getElementById("grp_2_sidewall_detail_path");
+		grp_twos.style.fill = chosenColor;
+	}
+	
+	function setUpSVGDocs(){
+		flapSvgDoc = document.querySelector("#rFlapDetail");
+	}
+	window.onload = function(){
+		setUpSVGDocs();
+	}
+	
+	
+	$('#ActivityDIV' ).makeSVGcolor('http://skydivewings.com/wordpress/wp-content/uploads/svgs/wingsClassic.svg');
+	$('#btnClear'      ).btnClear();
+	$('#btnDownloadSVG').btnDownload();
+	
+	loadSvg("#res-flap-detail-inner", "http://skydivewings.com/wordpress/wp-content/uploads/svgs/res_flap_detail-03-01");
+	loadSvg("#ring-cover-detail", "http://skydivewings.com/wordpress/wp-content/uploads/svgs/ring_cover_detail-01");
+	loadSvg("#sidewall-detail", "http://skydivewings.com/wordpress/wp-content/uploads/svgs/sidewall-detail-01");
+	
+	makePinstripeColors();
+	makeLogoSwatchesRFlap();
+	makeLogoSwatchesRingCover();
+	makeLogoSwatchesSidewall();
+	
+</script>
+</body>
+</html>
+
+
+

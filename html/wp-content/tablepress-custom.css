@@ -1,0 +1,17 @@
+.tablepress tbody td {
+	font-size: 15px;
+}
+
+.tablepress thead th,
+.tablepress tfoot th {
+	font-size: 15px;
+	color: #ffffff;
+	background-color: #d80f21;
+}
+
+.tablepress thead .sorting_asc,
+.tablepress thead .sorting_desc,
+.tablepress thead .sorting:hover {
+	color: #ffffff;
+	background-color: #000000;
+}
